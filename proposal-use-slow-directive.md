@@ -30,7 +30,7 @@ function slowFunction(){
 `"use slow";` affects only the function in which it is declared.
 
 ## Usage
-Use slow can be be more than once. Example:
+Use slow can be be more than once. Slowdown effect is multiplied. Example:
 ```js
 "use slow"; // x 2
 "use slow"; // x 2
