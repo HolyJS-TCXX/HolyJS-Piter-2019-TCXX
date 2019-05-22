@@ -14,7 +14,8 @@ const myPreCondition = {
 	},
 	b : {
 		e : 2,
-		f : 3
+		f : 3,
+		g : 7
 	},
 	c : 2
 };
@@ -41,7 +42,7 @@ So, the idea is about to extract only some necessary props to the other object d
 
 ## High-level API
 
-This example declaration we suppose `extra` will become an object as receive `a` and `c` from `myPreCondition` as properties:
+This example declaration with **extraction** we suppose `extra` will become an object as receive `a` and `c` from `myPreCondition` as properties:
 
 ```js
 const extra = myPreCondition.{ a, c };
@@ -52,11 +53,19 @@ console.log(extra); // { a : { d : 1 }, c : 2 }
 
 This means we did `Object.assign` directly, without any intermediate memory consumption, just made key `a` in `extra` as pointer to `a` of `myPreCondition` and made key `c` as immediately destructured `2` as it was pointed to numeric vector value.
 
-Partial deep extration example:
+Partial **deep extration** example:
 
 ```js
 const deepExtra = myPreCondition.{ a, c, b.{e} },
 console.log(Object.keys(deepExtra)); // ['a', 'c', 'e']
+```
+
+Partial **spread extration** example:
+
+```js
+const deepSpreadExtra = myPreCondition.{ a, b.{ ... } },
+console.log(Object.keys(deepExtra)); // ['a', 'e', 'f', 'g']
+console.log(deepExtra); // { a : { d : 1 }, e : 2, f : 3, g : 7 }
 ```
 
 ## Assignment to an existent object
