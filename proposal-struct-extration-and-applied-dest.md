@@ -73,3 +73,4 @@ console.log(existentObject.f); // 3, as it was at myPreCondition.b.f;
 ```
 
 So, the behaviour is the same as it was `Object.assign`, but for sure can be optimized under the hood of V8.
+And in an addition we can throw an exception, if nested prop does not exists. But also we can bring some compatibility with other proposals with pre-cheking if property exists `obj?.deep?.nested` or `obj?deep?nested` or `obj.?deeo.?nested`, nevermind how it will be finally implemented.
