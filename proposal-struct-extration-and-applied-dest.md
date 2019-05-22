@@ -72,11 +72,13 @@ console.log(deepExtra); // { a : { d : 1 }, e : 2, f : 3, g : 7 }
 
 ```js
 
-const existentObject = { e : 1, f : 2 };
+const existentObject = { a: 8, e : 1, f : 2 };
 
-existentObject = myPreCondition.{ a, c, b.{e, f} };
+existentObject.{ ...myPreCondition.{ c, b.{e, f} } };
 
 console.log(Object.keys(existentObject)); // ['a', 'c', 'e', 'f']
+
+console.log(existentObject); // { a : 8, c : 2, e : 2, f : 3 }
 console.log(existentObject.e); // 2, as it was at myPreCondition.b.e;
 console.log(existentObject.f); // 3, as it was at myPreCondition.b.f;
 ```
