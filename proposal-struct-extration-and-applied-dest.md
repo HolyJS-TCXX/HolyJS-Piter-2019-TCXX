@@ -1,6 +1,7 @@
-# ECMAScript proposal:  structured partial object "shallow copy" and co-aplied destruction.
+# ECMAScript proposal:  structured partial object "shallow copy" and co-aplied destructuring.
 - [Motivation](#motivation)
 - [High-level API](#high-level-api)
+- [Assignment to an existent object](#assignment-to-an-existent-object)
 
 ## Motivation
 
