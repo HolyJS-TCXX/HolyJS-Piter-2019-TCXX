@@ -62,12 +62,13 @@ console.log(Object.keys(deepExtra)); // ['a', 'c', 'e']
 
 ```js
 
-const existentObject = { e : 1 };
+const existentObject = { e : 1, f : 2 };
 
-existentObject = myPreCondition.{ a, c, b.{e} };
+existentObject = myPreCondition.{ a, c, b.{e, f} };
 
-console.log(Object.keys(existentObject)); // ['a', 'c', 'e']
+console.log(Object.keys(existentObject)); // ['a', 'c', 'e', 'f']
 console.log(existentObject.e); // 2, as it was at myPreCondition.b.e;
+console.log(existentObject.f); // 3, as it was at myPreCondition.b.f;
 ```
 
 So, the behaviour is the same as it was `Object.assign`, but for sure can be optimized under the hood of V8.
