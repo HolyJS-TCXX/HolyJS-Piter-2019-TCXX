@@ -1,0 +1,10 @@
+const { src, dest } = require('gulp')
+const fs = require('fs')
+const concat = require('gulp-concat')
+const gulpif = require('gulp-if')
+const objectBindingPlugin = require('./src/plugin/objectBindingPlugin')
+
+exports.default = () => src(['src/plugin/service/*.js', 'src/data/*.js'])
+  .pipe(gulpif((file) => !file.path.includes('service'), objectBindingPlugin()))
+  .pipe(concat('main.js'))
+  .pipe(dest('build/'))
