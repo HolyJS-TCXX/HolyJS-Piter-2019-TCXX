@@ -1,0 +1,21 @@
+{
+  "name": "holyjspiter2019tcxx",
+  "version": "0.0.1",
+  "description": "This code implementation is just for HolyJS Piter 2019",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "gulp",
+    "start": "npm run build && node build/main.js"
+  },
+  "url": "https://github.com/shallowones/HolyJS-Piter-2019-TCXX",
+  "author": "shallowones",
+  "license": "MIT",
+  "dependencies": {
+    "falafel": "^2.1.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-util": "^3.0.8",
+    "through2": "^3.0.1"
+  }
+}
