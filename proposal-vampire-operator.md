@@ -1,4 +1,4 @@
-# ECMAScript proposal: Add vampire operator
+# ECMAScript proposal: Vampire operator
 - [Motivation](#motivation)
 - [High-level API](#high-level-api)
 - [FAQ](#faq)
