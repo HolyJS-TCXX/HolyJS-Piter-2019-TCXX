@@ -1,11 +1,11 @@
-# ECMAScript proposal: Get and modify object data by queries
+# ECMAScript proposal: ETL API for JavaScript
 - [Motivation](#motivation)
 - [High-level API](#high-level-api)
 - [FAQ](#faq)
 
 ## Motivation
 
-You can have the ability to find and store data in the localStorage or in a created array by writing some queries. You can use a part of a database funtionality in JS to make the way of retrieving and saving data more comfortable. Queries are lazily evaluated to avoid testing all data when it's not necessary.
+You can have the ability to build ETL process, which allows you transfer and process data to the localStorage or to a created array. You can use a part of a pipeline funtionality in JS to make the way of retrieving and saving data more comfortable. These methods are lazily evaluated to avoid intermediate calculations when it's not necessary.
 
 ## High-level API
 
