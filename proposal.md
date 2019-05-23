@@ -5,7 +5,7 @@
 
 ## Motivation
 
-You can have the ability to build ETL process, which allows you transfer and process data to the localStorage or to a created array. You can use a part of a pipeline funtionality in JS to make the way of retrieving and saving data more comfortable. These methods are lazily evaluated to avoid intermediate calculations when it's not necessary.
+You can have the ability to build ETL process, which allows you transfer and process data to the localStorage or to a created array. You can use a part of a pipeline funсtionality in JS to make the way of retrieving and saving data more comfortable. These methods are lazily evaluated to avoid intermediate calculations when it's not necessary. Support different web sources: localStorage, REST services, arrays in-memory.
 
 ## High-level API
 
