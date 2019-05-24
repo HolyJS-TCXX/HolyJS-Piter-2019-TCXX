@@ -24,6 +24,9 @@ Instead use object with some property (this solution create a heap object and ta
 ```js
 function MyComponent(props) {
   let ref = null;
+  if (ref !== null) {
+    console.dir(ref.current)
+  }
   return <input ref={&ref} name="email" />
 }
 ```
