@@ -1,24 +1,25 @@
 ## motivation
-Описывает набор инструкций, которые будут выполняться только тогда, когда внешнему коду потоебуется результат исполнения этих инструкций.
+Описывает набор инструкций, которые будут выполняться только тогда, когда внешнему коду потребуется результат исполнения этих инструкций.
 
 ## примеры из других языков
 LINQ в .NET
 
 ## high-level api
 ```javascript
-const result = linq array.map(...).filter(...).reduce(...);
+const result = lasy array.map(...).filter(...).reduce(...);
+// инструкции не будут вычисляться вообще
 ...
 
-console.log(result[0]) // resul
+console.log(result[0]) // result будет вычислен только сейчас.
 ```
 
 ### Принудительное исполнение
 ```javascript
-const result = linq array.map(...).filter(...);
-// result не будет вычислен
+const result = lasy array.map(...).filter(...);
+// result не будет вычислен вообще
 ...
 (fuzzy result).reduce(...);
 // вычисляется значение на момент вызова fuzzy, а затем в очередь вычислений добавляется новый вызов
 
-console.log(result[0])
+console.log(result[0]); // окончательное вычисление result
 ```
